@@ -1,0 +1,28 @@
+<html>
+    <body>
+        {{data}}
+
+        <table border=1>
+            <tr>
+                <tr>
+                    {% for row in data %}
+                    <td><img src="{{url_for('static',filename='image/cola.jpg')}}"/></td>
+                {% endfor %}
+                </tr>
+                
+                {% for row in data %}    
+                <td>{{row[1]}}</a></td>   
+                {% endfor %}
+                </tr>
+
+                <tr>
+                {% for row in data %}    
+                <td>가격:{{row[2]}}</td>   
+                {% endfor %}
+                </tr>
+
+               
+        </table>
+
+    </body>
+</html>

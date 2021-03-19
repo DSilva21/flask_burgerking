@@ -1,0 +1,28 @@
+<html>
+    <body>
+        검색어에 만족되는 데이터
+        {{data}}
+        <table border=1>
+            
+                <tr>
+                {% for row in image_file %}
+                <td><img src={{row}}/></td>
+                {% endfor %}
+                </tr>
+
+                <tr>
+                {% for row in data %}    
+                <td>제품명:<a href="http://127.0.0.1:5000/product_info/?no={{row[1]}}">{{row[1]}}</a></td>   
+                {% endfor %}
+                </tr>
+
+                <tr>
+                {% for row in data %}    
+                <td>가격:{{row[2]}}</td>   
+                {% endfor %}
+                </tr>
+
+               
+        </table>
+    </body>
+</html>

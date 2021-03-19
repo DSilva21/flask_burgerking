@@ -1,0 +1,39 @@
+<html>
+    <body>
+            <table border=1>
+                    
+                <tr>           
+                    {% for row in data1 %}
+                    <td><img src="{{url_for('static',filename='image/cola.jpg')}}"/></td>
+                    {% endfor %}
+                    </tr> 
+                    <tr>
+                    {% for row in data1 %}    
+                    <td>{{row[0]}}</td>   
+                    {% endfor %}
+                    </tr>
+                    <tr>
+                    {% for row in data1 %}    
+                    <td><a href="http://127.0.0.1:5000/product_info/?no={{row[1]}}">{{row[1]}}</a></td>   
+                    {% endfor %}
+                    </tr>
+
+                <tr>           
+                {% for row in data2 %}
+                <td><img src="{{url_for('static',filename='image/cola.jpg')}}"/></td>
+                {% endfor %}
+                </tr> 
+                <tr>
+                {% for row in data2 %}    
+                <td>{{row[0]}}</td>   
+                {% endfor %}
+                </tr>
+                <tr>
+                {% for row in data2 %}    
+                <td><a href="http://127.0.0.1:5000/product_info/?no={{row[1]}}">{{row[1]}}</a></td>   
+                {% endfor %}
+                </tr>
+            </table>
+    </body>
+     
+</html>
